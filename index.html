@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nuestra historia</title>
+  <meta name="description" content="Una sorpresa para ti">
+  <meta property="og:title" content="Tengo una sorpresa para ti 💌">
+  <meta property="og:description" content="Ábrela cuando estés lista">
+  <meta property="og:image" content="fotos/portada.jpg">
+  <meta name="theme-color" content="#f6e3e1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cerrado">
+  <div id="corazones" aria-hidden="true"></div>
+
+  <!-- Pantalla del sobre -->
+  <section id="pantalla-sobre" aria-label="Sorpresa">
+    <p class="pista">Toca el sobre</p>
+    <button id="sobre" class="sobre" aria-label="Abrir la carta">
+      <span class="sobre-fondo"></span>
+      <span class="carta-mini" id="sobre-texto"></span>
+      <span class="sobre-frente"></span>
+      <span class="sobre-solapa"></span>
+      <span class="sello">♥</span>
+    </button>
+  </section>
+
+  <!-- Contenido principal -->
+  <main id="historia" hidden>
+    <section class="carta revelar" id="carta">
+      <h1 id="carta-titulo"></h1>
+      <div id="carta-texto" class="texto"></div>
+      <p class="firma" id="carta-firma"></p>
+      <a href="#linea" class="boton">Comenzar nuestra historia</a>
+    </section>
+
+    <section id="linea" class="linea" aria-label="Nuestra historia"></section>
+
+    <section class="contador revelar" id="contador">
+      <h2>Juntos desde hace</h2>
+      <p class="aviso" id="aviso" hidden></p>
+      <div class="cajas">
+        <div><span id="c-anios">0</span><small>años</small></div>
+        <div><span id="c-meses">0</span><small>meses</small></div>
+        <div><span id="c-dias">0</span><small>días</small></div>
+        <div><span id="c-horas">0</span><small>horas</small></div>
+        <div><span id="c-min">0</span><small>minutos</small></div>
+        <div><span id="c-seg">0</span><small>segundos</small></div>
+      </div>
+      <p class="total">Son <strong id="c-total">0</strong> días a tu lado</p>
+      <p class="desde" id="c-desde"></p>
+    </section>
+
+    <section class="cierre revelar">
+      <h2 id="cierre-titulo"></h2>
+      <p id="cierre-texto"></p>
+      <p class="corazon-grande" aria-hidden="true">♥</p>
+    </section>
+  </main>
+
+  <!-- Música -->
+  <audio id="audio" loop preload="none"></audio>
+  <button id="boton-musica" class="boton-musica" aria-label="Pausar música" hidden>♫</button>
+
+  <!-- Visor de fotos -->
+  <div id="visor" class="visor" hidden>
+    <button class="visor-cerrar" aria-label="Cerrar">×</button>
+    <img alt="">
+  </div>
+
+  <script src="contenido.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
